@@ -2,4 +2,31 @@
 
 @import url(../css/header.css);
 @import url(../css/footer.css);
-@import url(../css/master-parts.css);
+
+.padding-tb {
+  padding: 60px 0;
+}
+
+.padding-lr {
+  padding: 0 3%;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section_title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: ease-in-out 0.5s;
+}
+
+.button {
+
+}

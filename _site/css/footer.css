@@ -1,0 +1,32 @@
+footer {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 3%;
+}
+
+footer .logo a img{
+  width: 100%;
+  max-width: 200px;
+  filter: invert(100%);
+}
+
+a {
+  font-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+footer ul li a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}

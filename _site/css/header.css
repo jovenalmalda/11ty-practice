@@ -1,3 +1,16 @@
+header {
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+
+header .logo a img{
+  width: 100%;
+  max-width: 200px;
+}
+
 a {
   font-style: none;
   text-decoration: none;
@@ -6,4 +19,11 @@ a {
 
 header ul {
   display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header ul li a {
+  font-size: 20px;
+  font-weight: 600;
 }
