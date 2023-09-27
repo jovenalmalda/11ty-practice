@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* ===== */
+
+main {
+  padding-top: var(--nav-height-m);
+}
+
+.sp {
+  display: block;
+}
+
+.inner.entry-content {
+  margin-right: var(--half-padding);
+  margin-left: var(--half-padding);
+}
+
+.container-margin-tb {
+  margin: 40px 0;
+}
+
+.container-bg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* ===== */
+
+/* top mv 1000px start */
+.mv__heading--pc {
+  display: none;
+}
+
+.mv__heading--sp {
+  display: block;
+}
+/* top mv 1000px end */
+
+/* lower mv 1000px start*/
+/* lower mv 1000px end */
+
+/* contact banner 1000px start */
+.contactbnr__desc--large {
+  font-size: 26px;
+}
+/* contact banner 1000px end */
+
+/* company 2 1000px start */
+.sub-company02__message .message {
+  flex-direction: column;
+}
+
+.sub-company02__message .message__imgbox {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.sub-company02__message .message__textbox {
+  width: 100%;
+}
+
+/* company 2 1000px end */
+
+.otoiawase-flex-line {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+h1.lower-mv__text {
+  color: white;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 23px;
+  letter-spacing: 0.3rem;
+  text-shadow: 0px 0px 5px #000000, 0px 0px 10px #000000;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  line-height: var(--def-line-height);
+}

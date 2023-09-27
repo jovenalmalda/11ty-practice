@@ -1,0 +1,114 @@
+{%- set site_title = 'kofi' -%} {%- set site_description = '' -%} {%- set
+lower_target = '' -%} {%- if(page_id!='top') -%} {%- set lower_target = dir+'/'
+-%} {%- endif -%}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    {%- if title -%}
+    <title>{{ title }} | {{ site_title }}</title>
+    {%- else -%}{#title#}
+    <title>{{ site_title }}</title>
+    {%- endif -%} {%- if description -%}
+    <meta name="description" content="{{ description }}" />
+    {%- else -%}{# TOP or TOPTOP #}
+    <meta name="description" content="{{ site_description }}" />
+    {%- endif -%}
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ dir }}/img/favicon-top.ico" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style-sp1000.css" media="only screen and (max-width: 1000px)" />
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style-sp768.css" media="only screen and (max-width: 768px)" />
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript" src="{{ dir }}/js/functions.js"></script>
+
+  </head>
+  <body id="{{ page_id }}">
+    {% if page_id !== "top" %}
+    <body id="top-page {{ page_id }}" class = "sub-page sub-{{ page_id }}"> 
+    {% endif %}
+    <header>
+      <div class="inner">
+        <div class="header-logo">
+          <a class="header-logo__link" href="{{ dir }}/index.html">
+            <img
+              class="header-logo__img"
+              src="{{ dir }}/img/logo.png"
+              alt="{{ site_title }}"
+            />
+          </a>
+        </div>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="{{ dir }}/index.html#top-news" class="main-nav__link"
+                  >TOP</a
+                >
+              </li>
+              {% if page_id === 'top' %}
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">SUB</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">SUB</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">SUB</a>
+              </li>
+              {%- else -%}
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">SUB</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">SUB</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">SUB</a>
+              </li>
+              {%- endif -%}
+            </ul>
+          </div>
+          <div class="header-contact">
+            <div class="header-contact__item header-contact__tel">
+              <a class="header-contact__link" href="tel:012-345-6789">012-345-6789</a>
+            </div>
+            <div class="header-contact__item header-contact__mail">
+              <a class="header-contact__link" href="{{ dir }}/contact/index.html" >sample@gmail.com</a>
+            </div>
+          </div>
+        </nav>
+        <div class="sp-menubox sp">
+          <div class="sp-menu sp"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
