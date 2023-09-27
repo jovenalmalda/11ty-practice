@@ -7,30 +7,12 @@ lower_target = '' -%} {%- if(page_id!='top') -%} {%- set lower_target = dir+'/'
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    {%- if title -%}
-    <title>{{ title }} | {{ site_title }}</title>
-    {%- else -%}{#title#}
-    <title>{{ site_title }}</title>
-    {%- endif -%} {%- if description -%}
     <meta name="description" content="{{ description }}" />
-    {%- else -%}{# TOP or TOPTOP #}
-    <meta name="description" content="{{ site_description }}" />
-    {%- endif -%}
 
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style-sp1000.css" media="only screen and (max-width: 1000px)" />
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style-sp768.css" media="only screen and (max-width: 768px)" />
-
-    <!-- Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script type="text/javascript" src="{{ dir }}/js/functions.js"></script>
 
   </head>
   <body id="{{ page_id }}">
@@ -39,7 +21,7 @@ lower_target = '' -%} {%- if(page_id!='top') -%} {%- set lower_target = dir+'/'
     {% endif %}
     <header>
       <div class="logo">
-        <a href="#"><img src="{{dir}}/img/logo.png" alt="logo"></a>
+        <a href="{{dir}/}"><img src="{{dir}}/img/logo.png" alt="logo"></a>
       </div>
       <nav>
         <ul>

@@ -1,23 +1,45 @@
 ---
-com_name: coffee 
-page_id: orders
-title_en: MENU
-title: coffee
-description:
-mv_link: orders
-pagination: 
+pagination:
   data: collections.orders
   size: 3
   alias: orders
 permalink: "orders/{{pagination.pageNumber + 1}}/index.html"
-dir: ../..
+dir: /.
 ---
 {% include "header.njk" %}
 
 <main>
   <article>
-    <section>
-      
+    <section class="menu padding-section">
+      <div class="inner">
+        <div class="cards">
+          {% for item in orders %}
+          <div class="card">
+            <a href="{{ dir }}{{ item.url | url }}" class="link">
+              <div class="image">
+                <img src="{{ dir }}/img/orders/{{ item.data.postImage }}" alt="image"/>
+              </div>
+              <p class="ttl">
+                <span class="tag">sample</span>
+                {{ item.data.postTitle }}
+              </p>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- pagination -->
+        <ul class = "pagination">
+          <li>{% if pagination.href.previous %}<a class = "prev-page" href="{{ dir }}{{ pagination.href.previous }}index.html"><</a>{% endif %}</li>
+          {% for page_entry in pagination.pages %}
+          {%- set page_url = pagination.hrefs[loop.index0] -%}
+          <li>
+            <a href="{{ dir }}/{{ page_url }}"{% if page.url == page_url %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+          </li>
+          {% endfor %}
+          <li>{% if pagination.href.next %}<a class = "next-page" href="{{ dir }}{{ pagination.href.next }}index.html">></a>{% endif %}</li>
+        </ul>
+      </div>
     </section>
   </article>
 </main>

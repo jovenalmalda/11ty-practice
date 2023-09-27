@@ -3,17 +3,18 @@ title:
 description: This is Top page
 page_id: top
 dir: .
-com_name: eleventy
-tel: 000-0000-0000
-fax: 000-0000-0000
 ---
 
 {% include "header.njk" %}
 <!-- main start -->
 <main>
-  <section class="padding-tb">
+  <section class="padding-section">
     <div class="inner">
-      <h1 class="section_title">main page</h1>
+      <h1 class="section_title">Main page</h1>
+      <img src="{{dir}}/img/top-banner.jpg" alt="coffee">
+      <div class="button-wrap">
+        <a href="{{dir}}/orders/1/index.html" class="button">Go here</a>
+      </div>
     </div>
   </section>
 </main>

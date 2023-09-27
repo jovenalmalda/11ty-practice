@@ -1,48 +1,25 @@
 ---
-description: 
-page_id: orders
-mv_link: orders
-dir: ../..
+dir: /.
 ---
 {% include "header.njk" %}
-
 <main class = "sub-orders--content">
-      <article>
-        <!-- lower-mv & breadcrumb start -->
-        {% include "lower-mv.njk" %}
-        <!-- lower-mv & breadcrumb end -->
-
-        <section class="container-margin-tb container-padding-lr">
-          <div class="inner">
-            <h1 class="orders-detail__ttl"><span class="date">{{ postDate }}</span>{{postTitle}}</h1>
-          </div>
-          <div class="inner">
-            {{content | safe}}
-          </div>
-          <div class="inner">
-            <ul class="orders-detail__postlink flex">
-              <li class="prevpost">
-              </li>
-              <li class="back">
-                <a href="{{ dir }}/orders/1/index.html" class="hv">back</a>
-              </li>
-              <li class="nextpost">
-              </li>
-            </ul>
-            <ul class = "orders__pagination">
-              <li>{% if pagination.href.previous %}<a class = "prev-page" href="{{ dir }}/{{ pagination.href.previous }}"><</a>{% endif %}</li>
-              {% for page_entry in pagination.pages %}
-              {%- set page_url = pagination.hrefs[loop.index0] -%}
-              <li>
-                <a href="{{ dir }}/{{ page_url }}"{% if page.url == page_url %} aria-current="page"{% endif %}>{{ loop.index }}</a>
-              </li>
-              {% endfor %}
-              <li>{% if pagination.href.next %}<a class = "next-page" href="{{ dir }}/{{ pagination.href.next }}">></a>{% endif %}</li>
-            </ul>
-          </div>
-        </section>
-      </article>
-    </main>
-    <!-- main -->
-
+  <section class="padding-section ">
+    <div class="inner">
+      <h1>{{ postDate }}</span>{{postTitle}}</h1>
+      {{content | safe}}
+    </div>
+    <div class="inner">
+      <ul class = "pagination">
+        <li>{% if pagination.href.previous %}<a class = "prev-page" href="{{ dir }}/{{ pagination.href.previous }}"><</a>{% endif %}</li>
+        {% for page_entry in pagination.pages %}
+        {%- set page_url = pagination.hrefs[loop.index0] -%}
+        <li>
+          <a href="{{ dir }}/{{ page_url }}"{% if page.url == page_url %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+        </li>
+        {% endfor %}
+        <li>{% if pagination.href.next %}<a class = "next-page" href="{{ dir }}/{{ pagination.href.next }}">></a>{% endif %}</li>
+      </ul>
+    </div>
+  </section>
+</main>
 {% include "footer.njk" %}
