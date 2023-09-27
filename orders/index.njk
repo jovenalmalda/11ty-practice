@@ -14,46 +14,12 @@ dir: ../..
 ---
 {% include "header.njk" %}
 
-    <main class = "sub-main sub-orders">
-      <article>
-        <!-- lower-mv & breadcrumb start -->
-        {% include "lower-mv.njk" %}
-        <!-- lower-mv & breadcrumb end -->
-        <section class=" lower-section container-margin-tb container-padding-lr">
-          <div class="inner">
-            <div class="cards">
-              {% for item in orders | reverse %}
-              <div class="card">
-                <a href="{{ dir }}{{ item.url | url }}" class="orders__link hv">
-                  <div class="image">
-                    <img
-                      src="{{ dir }}/img/orders/{{ item.data.postImage }}"
-                      alt="orders-image"
-                    />
-                  </div>
-                  <p class="ttl">
-                    <span class="tag">sample</span>{{ item.data.postDate
-                    }}<br />{{ item.data.postTitle }}
-                  </p>
-                </a>
-              </div>
-              {% endfor %}
-            </div>
-                <!-- pagination -->
-            <ul class = "orders__pagination">
-              <li>{% if pagination.href.previous %}<a class = "prev-page" href="{{ dir }}/{{ pagination.href.previous }}"><</a>{% endif %}</li>
-              {% for page_entry in pagination.pages %}
-              {%- set page_url = pagination.hrefs[loop.index0] -%}
-              <li>
-                <a href="{{ dir }}/{{ page_url }}"{% if page.url == page_url %} aria-current="page"{% endif %}>{{ loop.index }}</a>
-              </li>
-              {% endfor %}
-              <li>{% if pagination.href.next %}<a class = "next-page" href="{{ dir }}/{{ pagination.href.next }}">></a>{% endif %}</li>
-            </ul>
-          </div>
-        </section>
-      </article>
-    </main>
-    <!-- main -->
+<main>
+  <article>
+    <section>
+      
+    </section>
+  </article>
+</main>
 
 {% include "footer.njk" %}

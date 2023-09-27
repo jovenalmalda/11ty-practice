@@ -17,25 +17,6 @@ lower_target = '' -%} {%- if(page_id!='top') -%} {%- set lower_target = dir+'/'
     <meta name="description" content="{{ site_description }}" />
     {%- endif -%}
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="{{ dir }}/img/favicon-top.ico" />
-
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="{{ dir }}/css/style-sp1000.css" media="only screen and (max-width: 1000px)" />
@@ -57,58 +38,23 @@ lower_target = '' -%} {%- if(page_id!='top') -%} {%- set lower_target = dir+'/'
     <body id="top-page {{ page_id }}" class = "sub-page sub-{{ page_id }}"> 
     {% endif %}
     <header>
-      <div class="inner">
-        <div class="header-logo">
-          <a class="header-logo__link" href="{{ dir }}/index.html">
-            <img
-              class="header-logo__img"
-              src="{{ dir }}/img/logo.png"
-              alt="{{ site_title }}"
-            />
-          </a>
-        </div>
-        <nav class="main-nav">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="{{ dir }}/index.html#top-news" class="main-nav__link"
-                  >TOP</a
-                >
-              </li>
-              {% if page_id === 'top' %}
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">SUB</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">SUB</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">SUB</a>
-              </li>
-              {%- else -%}
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">SUB</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">SUB</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">SUB</a>
-              </li>
-              {%- endif -%}
-            </ul>
-          </div>
-          <div class="header-contact">
-            <div class="header-contact__item header-contact__tel">
-              <a class="header-contact__link" href="tel:012-345-6789">012-345-6789</a>
-            </div>
-            <div class="header-contact__item header-contact__mail">
-              <a class="header-contact__link" href="{{ dir }}/contact/index.html" >sample@gmail.com</a>
-            </div>
-          </div>
-        </nav>
-        <div class="sp-menubox sp">
-          <div class="sp-menu sp"><span></span><span></span><span></span></div>
-        </div>
+      <div class="logo">
+        <a href="#"><img src="" alt=""></a>
       </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">top</a>
+          </li>
+          <li>
+            <a href="#">sub</a>
+          </li>
+          <li>
+            <a href="#">sub</a>
+          </li>
+          <li>
+            <a href="#">sub</a>
+          </li>
+        </ul>
+      </nav>
     </header>
